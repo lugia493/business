@@ -1,0 +1,153 @@
+{% extends 'escrow/base.html' %} {% load static %} {% block content %}
+
+<div class="row">
+  <div class="col-lg-4">
+    <label>Tenant Checklist</label>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="inlineCheckbox1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineCheckbox1"
+        >Proof of Credit</label
+      >
+      <input
+        type="file"
+        class="form-control-file"
+        id="exampleFormControlFile1"
+      />
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="inlineCheckbox1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineCheckbox1"
+        >Proof of Employment</label
+      >
+      <input
+        type="file"
+        class="form-control-file"
+        id="exampleFormControlFile1"
+      />
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="inlineCheckbox1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineCheckbox1"
+        >Proof of Identity</label
+      >
+      <input
+        type="file"
+        class="form-control-file"
+        id="exampleFormControlFile1"
+      />
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="inlineCheckbox1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineCheckbox1">Lease</label>
+      <input
+        type="file"
+        class="form-control-file"
+        id="exampleFormControlFile1"
+      />
+    </div>
+    <br />
+    <button type="submit" class="submit btn btn-primary mb-2">
+      Edit
+    </button>
+    <button id="pay-btn" type="submit" class="btn btn-success btn-block">
+      Continue
+    </button>
+  </div>
+  <div class="col-lg-4">
+    <label>Landlord Checklist</label>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="inlineCheckbox1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineCheckbox1"
+        >Proof of Ownership</label
+      >
+      <input
+        type="file"
+        class="form-control-file"
+        id="exampleFormControlFile1"
+      />
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="inlineCheckbox1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineCheckbox1"
+        >Video of Property</label
+      >
+      <input
+        type="file"
+        class="form-control-file"
+        id="exampleFormControlFile1"
+      />
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="inlineCheckbox1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineCheckbox1"
+        >Proof of Identity</label
+      >
+      <input
+        type="file"
+        class="form-control-file"
+        id="exampleFormControlFile1"
+      />
+    </div>
+  </div>
+</div>
+<hr />
+
+<div class="row">
+  <div class="col-lg-4">
+    <button id="status-btn" class="btn btn-outline-secondary hidden">
+      Pay
+    </button>
+    <button id="approve-btn" class="btn btn-outline-secondary hidden">
+      Approve
+    </button>
+    <button id="disapprove-btn" class="btn btn-outline-secondary hidden">
+      Disapprove
+    </button>
+  </div>
+</div>
+
+<script type="text/javascript">
+  console.log('Hi');
+  document.getElementById('pay-btn').addEventListener('click', function (e) {
+    document.getElementById('status-btn').classList.remove('hidden');
+    document.getElementById('approve-btn').classList.remove('hidden');
+    document.getElementById('disapprove-btn').classList.remove('hidden');
+  });
+</script>
+
+{% endblock content %}
