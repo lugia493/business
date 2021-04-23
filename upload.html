@@ -1,0 +1,79 @@
+{% extends 'escrow/base.html' %} {% load static %} {% block content %}
+<div class="row">
+  <div class="col-lg-4">
+    <div class="box-element" id="form-wrapper">
+      <form id="form">
+        <div class="user-info">
+          <label>Are you the Tenant or Landlord?</label>
+          <select class="form-control form-control-lg">
+            <option value="Tenant">Tenant</option>
+            <option value="Landlord">Landlord</option>
+          </select>
+          <br />
+          <label for="exampleInputEmail1">Enter other parties email</label>
+          <input
+            type="email"
+            class="form-control form-control-lg"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <br />
+          <label for="exampleFormControlTextarea1"
+            >Check the following boxes</label
+          >
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="inlineCheckbox1"
+              value="option1"
+            />
+            <label class="form-check-label" for="inlineCheckbox1"
+              >Proof of Credit</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="inlineCheckbox1"
+              value="option1"
+            />
+            <label class="form-check-label" for="inlineCheckbox1"
+              >Proof of Employment</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="inlineCheckbox1"
+              value="option1"
+            />
+            <label class="form-check-label" for="inlineCheckbox1"
+              >Proof of Identity</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="inlineCheckbox1"
+              value="option1"
+            />
+            <label class="form-check-label" for="inlineCheckbox1">Lease</label>
+          </div>
+        </div>
+        <hr />
+        <input
+          id="form-button"
+          class="btn btn-success btn-block"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
